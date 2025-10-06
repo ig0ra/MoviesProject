@@ -1,0 +1,10 @@
+//
+//  Config.example.xcconfig
+//  Movies
+//
+//  Copy this file to Config.xcconfig and replace placeholders.
+
+TMDB_BASE_URL = https://api.themoviedb.org/3
+TMDB_API_KEY = REPLACE_WITH_YOUR_TMDB_API_KEY
+TMDB_IMAGE_BASE = https://image.tmdb.org/t/p/
+

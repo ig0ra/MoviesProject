@@ -1,0 +1,33 @@
+Config.xcconfig
+MoviesREADME.md
+
+# macOS
+.DS_Store
+
+# Xcode (user-specific files and build artifacts)
+DerivedData/
+build/
+*.moved-aside
+*.xccheckout
+*.xcscmblueprint
+*.xcuserstate
+**/xcuserdata/
+
+# Archives and debug symbols
+*.xcarchive
+*.ipa
+*.dSYM
+*.dSYM.zip
+
+# Swift Package Manager (local build data)
+.build/
+.swiftpm/
+
+# Carthage (if used)
+Carthage/Build/
+
+# Fastlane (if used)
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/
+fastlane/test_output/

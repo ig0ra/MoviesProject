@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_7" orientation="portrait" appearance="light" />
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505" />
+        <capability name="Safe area layout guides" minToolsVersion="9.0" />
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0" />
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="fileOwner" userLabel="File's Owner" customClass="TopRatedMoviesViewController" customModule="Movies" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="collectionView" id="collectionOutlet" />
+                <outlet property="headerContainer" destination="headerContainer" id="headerOutlet" />
+                <outlet property="offlineBannerHeightConstraint" destination="bannerHeight" id="bannerHeightOutlet" />
+                <outlet property="offlineBannerView" destination="offlineBanner" id="offlineBannerOutlet" />
+                <outlet property="offlineInfoLabel" destination="offlineLabel" id="offlineLabelOutlet" />
+                <outlet property="activityIndicator" destination="activityIndicator" id="activityOutlet" />
+                <outlet property="view" destination="mainView" id="viewOutlet" />
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="firstResponder" userLabel="First Responder" />
+        <view key="view" contentMode="scaleToFill" id="mainView">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="844" />
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES" />
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="offlineBanner">
+                    <color key="backgroundColor" systemColor="systemYellowColor" />
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Offline data" textAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="offlineLabel">
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13" />
+                            <color key="textColor" systemColor="labelColor" />
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="offlineLabel" firstAttribute="top" secondItem="offlineBanner" secondAttribute="top" constant="6" id="bannerTop" />
+                        <constraint firstItem="offlineLabel" firstAttribute="leading" secondItem="offlineBanner" secondAttribute="leading" constant="12" id="bannerLeading" />
+                        <constraint firstAttribute="trailing" secondItem="offlineLabel" secondAttribute="trailing" constant="12" id="bannerTrailing" />
+                        <constraint firstAttribute="bottom" secondItem="offlineLabel" secondAttribute="bottom" constant="6" id="bannerBottom" />
+                        <constraint firstAttribute="height" constant="0.0" id="bannerHeight" />
+                    </constraints>
+                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="headerContainer">
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="collectionView">
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite" />
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0" minimumInteritemSpacing="0" id="flowLayout" />
+                </collectionView>
+                <activityIndicatorView opaque="NO" hidden="YES" contentMode="scaleToFill" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="activityIndicator">
+                    <color key="color" systemColor="labelColor" />
+                </activityIndicatorView>
+                
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="safeArea" />
+            <color key="backgroundColor" systemColor="systemBackgroundColor" />
+            <constraints>
+                <constraint firstItem="offlineBanner" firstAttribute="top" secondItem="safeArea" secondAttribute="top" id="bannerTopConstraint" />
+                <constraint firstItem="offlineBanner" firstAttribute="leading" secondItem="mainView" secondAttribute="leading" id="bannerLeadingConstraint" />
+                <constraint firstAttribute="trailing" secondItem="offlineBanner" secondAttribute="trailing" id="bannerTrailingConstraint" />
+                <constraint firstItem="headerContainer" firstAttribute="top" secondItem="offlineBanner" secondAttribute="bottom" id="headerTopConstraint" />
+                <constraint firstItem="headerContainer" firstAttribute="leading" secondItem="safeArea" secondAttribute="leading" id="headerLeadingConstraint" />
+                <constraint firstItem="safeArea" firstAttribute="trailing" secondItem="headerContainer" secondAttribute="trailing" id="headerTrailingConstraint" />
+                <constraint firstItem="collectionView" firstAttribute="top" secondItem="headerContainer" secondAttribute="bottom" id="collectionTop" />
+                <constraint firstItem="collectionView" firstAttribute="leading" secondItem="safeArea" secondAttribute="leading" id="collectionLeading" />
+                <constraint firstItem="safeArea" firstAttribute="trailing" secondItem="collectionView" secondAttribute="trailing" id="collectionTrailing" />
+                <constraint firstItem="collectionView" firstAttribute="bottom" secondItem="mainView" secondAttribute="bottom" id="collectionBottom" />
+                <constraint firstItem="activityIndicator" firstAttribute="centerX" secondItem="mainView" secondAttribute="centerX" id="indicatorCenterX" />
+                <constraint firstItem="activityIndicator" firstAttribute="centerY" secondItem="mainView" secondAttribute="centerY" id="indicatorCenterY" />
+                
+            </constraints>
+        </view>
+    </objects>
+</document>
